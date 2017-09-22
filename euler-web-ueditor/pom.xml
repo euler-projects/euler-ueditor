@@ -3,25 +3,58 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>net.eulerframework</groupId>
-        <artifactId>euler-framework</artifactId>
-        <version>0.2.0-SNAPSHOT</version>
+        <artifactId>euler-parent</artifactId>
+        <version>2-SNAPSHOT</version>
+        <relativePath/>
     </parent>
+    
     <artifactId>euler-web-ueditor</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Euler UEditor</name>
+    <url>https://eulerproject.io</url>
+
+    <properties>
+        <jdk.version>1.8</jdk.version>
+        <eulerframework.version>2.0.0-SNAPSHOT</eulerframework.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
         </dependency>
+        
         <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>net.eulerframework</groupId>
             <artifactId>euler-web-core</artifactId>
-            <version>${project.version}</version>
+            <version>${eulerframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.eulerframework</groupId>
+            <artifactId>euler-web-basic-hibernate</artifactId>
+            <version>${eulerframework.version}</version>
         </dependency>
     </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <scm>
+        <connection>scm:git:https://github.com/euler-projects/euler-ueditor.git</connection>
+        <developerConnection>scm:git:git@github.com:euler-projects/euler-ueditor.git</developerConnection>
+        <url>https://github.com/euler-projects/euler-ueditor</url>
+    </scm>
 </project>
