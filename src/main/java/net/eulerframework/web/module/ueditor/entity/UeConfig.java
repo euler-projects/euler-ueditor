@@ -12,48 +12,55 @@ public class UeConfig {
 
     private String imageActionName;
     private String imageFieldName;
-    private Integer imageMaxSize;
+    private Long imageMaxSize;
     private List<String> imageAllowFiles;
     private Boolean imageCompressEnable;
     private Integer imageCompressBorder;
     private String imageInsertAlign;
     private String imageUrlPrefix;
     private String imagePathFormat;
+    
     private String scrawlActionName;
     private String scrawlFieldName;
     private String scrawlPathFormat;
-    private Integer scrawlMaxSize;
+    private Long scrawlMaxSize;
     private String scrawlUrlPrefix;
     private String scrawlInsertAlign;
+    
     private String snapscreenActionName;
     private String snapscreenPathFormat;
     private String snapscreenUrlPrefix;
     private String snapscreenInsertAlign;
+    
     private List<String> catcherLocalDomain;
     private String catcherActionName;
     private String catcherFieldName;
     private String catcherPathFormat;
     private String catcherUrlPrefix;
-    private Integer catcherMaxSize;
+    private Long catcherMaxSize;
     private List<String> catcherAllowFiles;
+    
     private String videoActionName;
     private String videoFieldName;
     private String videoPathFormat;
     private String videoUrlPrefix;
-    private Integer videoMaxSize;
+    private Long videoMaxSize;
     private List<String> videoAllowFiles;
+    
     private String fileActionName;
     private String fileFieldName;
     private String filePathFormat;
     private String fileUrlPrefix;
-    private Integer fileMaxSize;
+    private Long fileMaxSize;
     private List<String> fileAllowFiles;
+    
     private String imageManagerActionName;
     private String imageManagerListPath;
     private Integer imageManagerListSize;
     private String imageManagerUrlPrefix;
     private String imageManagerInsertAlign;
     private List<String> imageManagerAllowFiles;
+    
     private String fileManagerActionName;
     private String fileManagerListPath;
     private String fileManagerUrlPrefix;
@@ -76,11 +83,11 @@ public class UeConfig {
         return imageFieldName;
     }
 
-    public void setImageMaxSize(Integer imageMaxSize) {
+    public void setImageMaxSize(Long imageMaxSize) {
         this.imageMaxSize = imageMaxSize;
     }
 
-    public Integer getImageMaxSize() {
+    public Long getImageMaxSize() {
         return imageMaxSize;
     }
 
@@ -156,11 +163,11 @@ public class UeConfig {
         return scrawlPathFormat;
     }
 
-    public void setScrawlMaxSize(Integer scrawlMaxSize) {
+    public void setScrawlMaxSize(Long scrawlMaxSize) {
         this.scrawlMaxSize = scrawlMaxSize;
     }
 
-    public Integer getScrawlMaxSize() {
+    public Long getScrawlMaxSize() {
         return scrawlMaxSize;
     }
 
@@ -252,11 +259,11 @@ public class UeConfig {
         return catcherUrlPrefix;
     }
 
-    public void setCatcherMaxSize(Integer catcherMaxSize) {
+    public void setCatcherMaxSize(Long catcherMaxSize) {
         this.catcherMaxSize = catcherMaxSize;
     }
 
-    public Integer getCatcherMaxSize() {
+    public Long getCatcherMaxSize() {
         return catcherMaxSize;
     }
 
@@ -300,11 +307,11 @@ public class UeConfig {
         return videoUrlPrefix;
     }
 
-    public void setVideoMaxSize(Integer videoMaxSize) {
+    public void setVideoMaxSize(Long videoMaxSize) {
         this.videoMaxSize = videoMaxSize;
     }
 
-    public Integer getVideoMaxSize() {
+    public Long getVideoMaxSize() {
         return videoMaxSize;
     }
 
@@ -348,11 +355,11 @@ public class UeConfig {
         return fileUrlPrefix;
     }
 
-    public void setFileMaxSize(Integer fileMaxSize) {
+    public void setFileMaxSize(Long fileMaxSize) {
         this.fileMaxSize = fileMaxSize;
     }
 
-    public Integer getFileMaxSize() {
+    public Long getFileMaxSize() {
         return fileMaxSize;
     }
 
