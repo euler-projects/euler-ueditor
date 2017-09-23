@@ -6,7 +6,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.UUID;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,20 +13,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import net.eulerframework.common.util.io.file.FileUtils;
 import net.eulerframework.web.core.annotation.AjaxController;
 import net.eulerframework.web.core.base.controller.AjaxSupportWebController;
-import net.eulerframework.web.module.file.util.WebFileTool;
 import net.eulerframework.web.module.ueditor.conf.UEditorConfig;
 import net.eulerframework.web.module.ueditor.entity.FileUploadResult;
 import net.eulerframework.web.module.ueditor.entity.UeConfig;
-import net.eulerframework.web.module.ueditor.service.UeService;
 
 @AjaxController
 @RequestMapping("ueditor")
 public class UeditorAjaxController extends AjaxSupportWebController {
-
-    @Resource
-    private UeService ueService;
 
     @ResponseBody
     @RequestMapping(value = "/controller", method = RequestMethod.GET)
@@ -73,7 +68,7 @@ public class UeditorAjaxController extends AjaxSupportWebController {
         String targetFilename;
         
         if(saveFileNameAsUUID) {
-            targetFilename = UUID.randomUUID().toString() + WebFileTool.extractFileExtension(originalFilename);
+            targetFilename = UUID.randomUUID().toString() + FileUtils.extractFileExtension(originalFilename);
         } else {
             targetFilename = originalFilename;
         }
