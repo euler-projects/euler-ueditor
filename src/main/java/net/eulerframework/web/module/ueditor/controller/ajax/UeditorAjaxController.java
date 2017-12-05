@@ -17,8 +17,8 @@ import net.eulerframework.common.util.io.file.FileUtils;
 import net.eulerframework.web.core.annotation.AjaxController;
 import net.eulerframework.web.core.base.controller.AjaxSupportWebController;
 import net.eulerframework.web.module.ueditor.conf.UEditorConfig;
-import net.eulerframework.web.module.ueditor.entity.FileUploadResult;
-import net.eulerframework.web.module.ueditor.entity.UeConfig;
+import net.eulerframework.web.module.ueditor.vo.FileUploadResult;
+import net.eulerframework.web.module.ueditor.vo.UeConfig;
 
 @AjaxController
 @RequestMapping("ueditor")

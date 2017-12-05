@@ -40,7 +40,7 @@ import net.eulerframework.cache.inMemoryCache.DefaultObjectCache;
 import net.eulerframework.cache.inMemoryCache.ObjectCachePool;
 import net.eulerframework.common.util.DateUtils;
 import net.eulerframework.common.util.property.PropertyReader;
-import net.eulerframework.web.module.ueditor.entity.UeConfig;
+import net.eulerframework.web.module.ueditor.vo.UeConfig;
 
 /**
  * @author cFrost

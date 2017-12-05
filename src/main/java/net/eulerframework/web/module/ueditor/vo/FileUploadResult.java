@@ -1,4 +1,4 @@
-package net.eulerframework.web.module.ueditor.entity;
+package net.eulerframework.web.module.ueditor.vo;
 
 public class FileUploadResult {
 
