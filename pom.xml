@@ -9,13 +9,13 @@
     </parent>
     
     <artifactId>euler-web-ueditor</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0.M1-SNAPSHOT</version>
     <name>Euler UEditor</name>
     <url>https://eulerproject.io</url>
 
     <properties>
         <jdk.version>1.8</jdk.version>
-        <eulerframework.version>1.0.0-SNAPSHOT</eulerframework.version>
+        <eulerframework.version>1.0.0.M2-SNAPSHOT</eulerframework.version>
     </properties>
 
     <dependencies>
@@ -52,4 +52,15 @@
         <developerConnection>scm:git:git@github.com:euler-projects/euler-ueditor.git</developerConnection>
         <url>https://github.com/euler-projects/euler-ueditor</url>
     </scm>
+
+    <repositories>
+        <repository>
+            <id>euler-snapshots</id>
+            <name>Euler Snapshots</name>
+            <url>https://repo.eulerproject.io/repository/maven-snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
