@@ -15,14 +15,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 import net.eulerframework.common.util.io.file.FileUtils;
 import net.eulerframework.web.core.annotation.AjaxController;
-import net.eulerframework.web.core.base.controller.AjaxSupportWebController;
+import net.eulerframework.web.core.base.controller.ApiSupportWebController;
 import net.eulerframework.web.module.ueditor.conf.UEditorConfig;
 import net.eulerframework.web.module.ueditor.vo.FileUploadResult;
 import net.eulerframework.web.module.ueditor.vo.UeConfig;
 
 @AjaxController
 @RequestMapping("ueditor")
-public class UeditorAjaxController extends AjaxSupportWebController {
+public class UeditorAjaxController extends ApiSupportWebController {
 
     @ResponseBody
     @RequestMapping(value = "/controller", method = RequestMethod.GET)
