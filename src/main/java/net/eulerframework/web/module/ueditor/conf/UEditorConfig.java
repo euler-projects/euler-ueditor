@@ -24,8 +24,6 @@
  * For more information, please visit the following website
  * 
  * https://eulerproject.io
- * https://github.com/euler-form/web-form
- * https://cfrost.net
  */
 package net.eulerframework.web.module.ueditor.conf;
 
