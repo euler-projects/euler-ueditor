@@ -14,7 +14,6 @@
     <url>https://eulerproject.io</url>
 
     <properties>
-        <jdk.version>1.8</jdk.version>
         <eulerframework.version>1.0.0.M2-SNAPSHOT</eulerframework.version>
     </properties>
 
@@ -32,20 +31,6 @@
             <version>${eulerframework.version}</version>
         </dependency>
     </dependencies>
-    
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
     <scm>
         <connection>scm:git:https://github.com/euler-projects/euler-ueditor.git</connection>
