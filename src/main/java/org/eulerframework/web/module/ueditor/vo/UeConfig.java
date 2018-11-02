@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.eulerframework.web.module.ueditor.vo;
+package org.eulerframework.web.module.ueditor.vo;
 
 import java.util.List;
 

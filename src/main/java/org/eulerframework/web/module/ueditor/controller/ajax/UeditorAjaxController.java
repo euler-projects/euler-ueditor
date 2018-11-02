@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.eulerframework.web.module.ueditor.controller.ajax;
+package org.eulerframework.web.module.ueditor.controller.ajax;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,12 +28,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import net.eulerframework.common.util.io.file.FileUtils;
-import net.eulerframework.web.core.annotation.AjaxController;
-import net.eulerframework.web.core.base.controller.ApiSupportWebController;
-import net.eulerframework.web.module.ueditor.conf.UEditorConfig;
-import net.eulerframework.web.module.ueditor.vo.FileUploadResult;
-import net.eulerframework.web.module.ueditor.vo.UeConfig;
+import org.eulerframework.common.util.io.file.FileUtils;
+import org.eulerframework.web.core.annotation.AjaxController;
+import org.eulerframework.web.core.base.controller.ApiSupportWebController;
+import org.eulerframework.web.module.ueditor.conf.UEditorConfig;
+import org.eulerframework.web.module.ueditor.vo.FileUploadResult;
+import org.eulerframework.web.module.ueditor.vo.UeConfig;
 
 @AjaxController
 @RequestMapping("ueditor")

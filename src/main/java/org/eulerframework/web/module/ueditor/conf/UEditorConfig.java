@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.eulerframework.web.module.ueditor.conf;
+package org.eulerframework.web.module.ueditor.conf;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -22,11 +22,11 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import net.eulerframework.cache.inMemoryCache.DefaultObjectCache;
-import net.eulerframework.cache.inMemoryCache.ObjectCachePool;
-import net.eulerframework.common.util.DateUtils;
-import net.eulerframework.common.util.property.PropertyReader;
-import net.eulerframework.web.module.ueditor.vo.UeConfig;
+import org.eulerframework.cache.inMemoryCache.DefaultObjectCache;
+import org.eulerframework.cache.inMemoryCache.ObjectCachePool;
+import org.eulerframework.common.util.DateUtils;
+import org.eulerframework.common.util.property.PropertyReader;
+import org.eulerframework.web.module.ueditor.vo.UeConfig;
 
 /**
  * @author cFrost
