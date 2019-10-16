@@ -4,18 +4,32 @@
     <parent>
         <groupId>org.eulerframework</groupId>
         <artifactId>euler-parent</artifactId>
-        <version>4</version>
-        <relativePath/>
+        <version>5-SNAPSHOT</version>
     </parent>
     
     <artifactId>euler-web-ueditor</artifactId>
-    <version>1.0.0.M1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>Euler UEditor</name>
     <url>https://eulerproject.io</url>
 
     <properties>
-        <eulerframework.version>1.0.0.M2-SNAPSHOT</eulerframework.version>
+        <revision>1.0.0.M7-SNAPSHOT</revision>
+        <main.basedir>${basedir}</main.basedir>
+
+        <euler-eulerframework.version>1.0.0.M7-SNAPSHOT</euler-eulerframework.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.eulerframework</groupId>
+                <artifactId>euler-web-dependencies</artifactId>
+                <version>${euler-eulerframework.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -27,10 +41,44 @@
         
         <dependency>
             <groupId>org.eulerframework</groupId>
-            <artifactId>euler-web-core</artifactId>
-            <version>${eulerframework.version}</version>
+            <artifactId>euler-web-support</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <inherited>true</inherited>
+                <executions>
+                    <execution>
+                        <!-- Tidy up all POMs before they are published -->
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                        <configuration>
+                            <updatePomFile>true</updatePomFile>
+                            <flattenMode>oss</flattenMode>
+                            <pomElements>
+                                <distributionManagement>remove</distributionManagement>
+                                <repositories>remove</repositories>
+                            </pomElements>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>flatten-clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
     <scm>
         <connection>scm:git:https://github.com/euler-projects/euler-ueditor.git</connection>
@@ -40,9 +88,12 @@
 
     <repositories>
         <repository>
-            <id>euler-snapshots</id>
-            <name>Euler Snapshots</name>
+            <id>euler-repo-maven-snapshots</id>
+            <name>Snapshot Repository for Euler Projects</name>
             <url>https://repo.eulerproject.io/repository/maven-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>

@@ -15,10 +15,13 @@
  */
 package org.eulerframework.web.module.ueditor.conf;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.UUID;
 
+import org.eulerframework.common.util.property.FilePropertySource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,7 +41,15 @@ public class UEditorConfig {
     private static final DefaultObjectCache<String, Object> CONFIG_CAHCE = ObjectCachePool
             .generateDefaultObjectCache(Long.MAX_VALUE);
 
-    private static final PropertyReader properties = new PropertyReader("/config-ueditor.properties");
+    private static final PropertyReader properties;
+
+    static {
+        try {
+            properties = new PropertyReader(new FilePropertySource("/config-ueditor.properties"));
+        } catch (IOException | URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     private static class UEditorConfigKey {
         private final static String ENABLE_IMAGE_UPLOAD = "ueditor.enableImageUpload";
@@ -66,11 +77,6 @@ public class UEditorConfig {
         private final static long MAX_VIDEO_FILE_SIZE = 52428800;
         private final static long MAX_SCRAWL_FILE_SIZE = 10485760;
         private final static long MAX_CATCHER_FILE_SIZE = 10485760;
-    }
-
-    public static boolean clearUEditorConfigCache() {
-        properties.refresh();
-        return CONFIG_CAHCE.clear();
     }
     
     public static boolean isImageUploadEnabled() {
